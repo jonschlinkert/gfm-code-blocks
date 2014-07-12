@@ -12,6 +12,7 @@ Retrieve a value from the data object with all template strings resolved.
 `options` sent to [_.template](http://lodash.com/docs#template) when resolving values.
 
 Example:
+
 ```js
 var data = {
   key: '<%= uppercase("foo") %>'
@@ -54,6 +55,7 @@ Bind the above API to a provided data object so you can access it more succinctl
 **Note:** When using the interface API, passing options to `get` or `process` will perform a shallow merge over `options` provided when the interface was instantiated.
 
 Example:
+
 ```js
 var configRaw = {
   key: 'value',

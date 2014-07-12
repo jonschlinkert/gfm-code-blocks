@@ -1,22 +1,24 @@
+/*!
+ * fenced-code-blocks <https://github.com/jonschlinkert/fenced-code-blocks>
+ *
+ * Copyright (c) 2014 Jon Schlinkert, contributors.
+ * Licensed under the MIT License
+ */
 
+'use strict';
 
-var codeBlocks = require('..');
+var assert = require('assert');
 var file = require('fs-utils');
+var code = require('..');
 
+var fixtures = function (filepath) {
+  return file.readFileSync('test/fixtures/' + filepath + '.md');
+}
 
-var readme = file.readFileSync('test/fixtures/README.md');
-file.writeFileSync('test/actual/README.md', codeBlocks(readme));
-
-
-var assemble = file.readFileSync('test/fixtures/assemble.md');
-file.writeFileSync('test/actual/assemble.md', codeBlocks(assemble));
-
-var expander = file.readFileSync('test/fixtures/expander.md');
-file.writeFileSync('test/actual/expander.md', codeBlocks(expander));
-
-var ansi = file.readFileSync('test/fixtures/ansi.md');
-file.writeFileSync('test/actual/ansi.md', codeBlocks(ansi));
-
-
-var async = file.readFileSync('test/fixtures/async.md');
-file.writeFileSync('test/actual/async.md', codeBlocks(async));
+describe('code', function () {
+  it('should parse gfm code blocks', function () {
+    var actual = code(fixtures('README'));
+    console.log(actual)
+    // assert(code(fixtures('README')));
+  });
+});

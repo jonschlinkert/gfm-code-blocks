@@ -83,8 +83,9 @@ assemble.task('docs', function() {
 If the option is true, use the given middleware, otherwise use noop.
 
 **Example**
+
 ```js
- return fs.src(pattern, options)
+return fs.src(pattern, options)
    .pipe(this.use(options.parse, this.parse)(options))
    .pipe(this.use(options.render, this.parse)(options));
 ```
@@ -132,7 +133,6 @@ var partials = assemble.partials();
 _(partials).forEach(function (partial, name) {
   Handlebars.registerPartial(name, partial.content);
 });
-
 ```
 
 * `return` {Object} all the parsed partials
@@ -177,7 +177,6 @@ var layouts = assemble.layouts();
 _(layouts).forEach(function (layout, name) {
   assembleLayouts.set(name, layout);
 });
-
 ```
 
 * `return` {Object} all the parsed layouts

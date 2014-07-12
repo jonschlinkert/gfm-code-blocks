@@ -17,25 +17,26 @@ callback as the last argument of your `async` function.
 
 ## Quick Examples
 
-```javascript
-async.map(['file1','file2','file3'], fs.stat, function(err, results){
-    // results is now an array of stats for each file
-});
 
-async.filter(['file1','file2','file3'], fs.exists, function(results){
-    // results now equals an array of the existing files
-});
+    async.map(['file1','file2','file3'], fs.stat, function(err, results){
+        // results is now an array of stats for each file
+    });
 
-async.parallel([
-    function(){ ... },
-    function(){ ... }
-], callback);
+    async.filter(['file1','file2','file3'], fs.exists, function(results){
+        // results now equals an array of the existing files
+    });
 
-async.series([
-    function(){ ... },
-    function(){ ... }
-]);
-```
+    async.parallel([
+        function(){ ... },
+        function(){ ... }
+    ], callback);
+
+    async.series([
+        function(){ ... },
+        function(){ ... }
+    ]);
+
+
 
 There are many more functions available so take a look at the docs below for a
 full list. This module aims to be comprehensive, so if you feel anything is
@@ -188,7 +189,6 @@ __Arguments__
 
 __Examples__
 
-
 ```js
 // assuming openFiles is an array of file names and saveFile is a function
 // to save the modified contents of that file:
@@ -197,6 +197,7 @@ async.each(openFiles, saveFile, function(err){
     // if any of the saves produced an error, err would equal that error
 });
 ```
+
 
 ```js
 // assuming openFiles is an array of file names and saveFile is a function
@@ -1369,7 +1370,6 @@ async.auto({
 });
 ```
 
-
 ---------------------------------------
 
 <a name="iterator" />
@@ -1588,6 +1588,8 @@ var hello = function(name, callback){
     }, 1000);
 };
 ```
+
+
 ```js
 node> async.log(hello, 'world');
 'hello world'
@@ -1618,6 +1620,8 @@ var hello = function(name, callback){
     }, 1000);
 };
 ```
+
+
 ```js
 node> async.dir(hello, 'world');
 {hello: 'world'}
