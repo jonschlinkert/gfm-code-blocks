@@ -7,37 +7,35 @@
 
 'use strict';
 
-var assert = require('assert');
+var should = require('should');
 var helpers = require('test-helpers')({dir: './'});
-var code = require('./');
+var readme = helpers.readFixture('README.md');
+var codeBlocks = require('./');
 
 
 describe('code block', function () {
   it('should return the code blocks from the fixture.', function () {
-    var readme = helpers.readFixture('README.md');
-    var blocks = code(readme);
-    assert.equal(Array.isArray(blocks), true);
-    assert.equal(blocks.length, 5);
+    var blocks = codeBlocks(readme);
+    blocks.should.be.an.object;
   });
 
   it('should get the language from a code block.', function () {
     var readme = helpers.readFixture('README.md');
-    var blocks = code(readme);
-    var lang = RegExp.$2;
-    assert.equal(blocks[0].lang, 'bash');
+    console.log(codeBlocks(readme))
+    codeBlocks(readme)[0].lang.should.equal('bash');
   });
 
   it('should get a code block from a string.', function () {
-    var blocks = code('\n```js\nfoo\n```\n');
-    assert.equal(blocks[0].block, '```js\nfoo\n```');
-    assert.equal(blocks[0].lang, 'js');
-    assert.equal(blocks[0].code, 'foo');
+    var blocks = codeBlocks('\n```js\nfoo\n```\n');
+    blocks[0].block.should.equal('```js\nfoo\n```');
+    blocks[0].lang.should.equal('js');
+    blocks[0].code.should.equal('foo');
   });
 
   it('should get a code block from a string.', function () {
-    var blocks = code('abc\n```bash\nbar\n```\nxyz');
-    assert.equal(blocks[0].block, '```bash\nbar\n```');
-    assert.equal(blocks[0].lang, 'bash');
-    assert.equal(blocks[0].code, 'bar');
+    var blocks = codeBlocks('abc\n```bash\nbar\n```\nxyz');
+    blocks[0].block.should.equal('```bash\nbar\n```');
+    blocks[0].lang.should.equal('bash');
+    blocks[0].code.should.equal('bar');
   });
 });

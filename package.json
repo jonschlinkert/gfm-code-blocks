@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "test-helpers": "^0.1.3",
+    "should": "^4.0.4",
     "verb": ">= 0.2.6",
     "verb-tag-jscomments": ">= 0.1.4"
   },
