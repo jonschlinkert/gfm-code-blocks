@@ -9,6 +9,24 @@ Install with [npm](npmjs.org):
 npm i render-markdown --save-dev
 ```
 
+
+## Install
+#### [npm](npmjs.org)
+
+```bash
+npm i gfm-code-blocks --save
+```
+
+## Usage
+
+```js
+var code = require('gfm-code-blocks');
+console.log(code('\n```js\nfoo\n```\n'));
+//=> {lang: 'js', code: 'foo'}
+```
+
+
+
 ## Usage
 
 ```js

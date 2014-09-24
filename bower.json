@@ -1,0 +1,7 @@
+{
+  "name": "gfm-code-blocks",
+  "version": "0.2.0",
+  "main": [
+    "index.js"
+  ]
+}

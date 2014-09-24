@@ -11,11 +11,11 @@ var re = require('gfm-code-block-regex')();
 
 module.exports = function(str) {
   var arr = [];
-
   while(re.exec(str)) {
     arr.push({
-      lang: RegExp.$2,
-      code: RegExp.$3
+      lang: RegExp.$3,
+      code: RegExp.$5,
+      block: RegExp.$1
     });
   }
   return arr;
