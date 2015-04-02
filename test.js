@@ -1,8 +1,8 @@
 /*!
  * gfm-code-blocks <https://github.com/jonschlinkert/gfm-code-blocks>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
- * Licensed under the MIT License
+ * Copyright (c) 2014-2015, Jon Schlinkert.
+ * Licensed under the MIT License.
  */
 
 'use strict';
@@ -21,7 +21,6 @@ describe('code block', function () {
 
   it('should get the language from a code block.', function () {
     var readme = helpers.readFixture('README.md');
-    console.log(codeBlocks(readme))
     codeBlocks(readme)[0].lang.should.equal('bash');
   });
 
