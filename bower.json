@@ -1,7 +1,63 @@
 {
   "name": "gfm-code-blocks",
-  "version": "0.2.0",
+  "description": "Extract gfm (GitHub Flavored Markdown) fenced code blocks from a string.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/gfm-code-blocks.git"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/gfm-code-blocks/blob/master/LICENSE"
+  },
+  "homepage": "https://github.com/jonschlinkert/gfm-code-blocks",
+  "authors": [
+    {
+      "name": "Jon Schlinkert",
+      "homepage": "https://github.com/jonschlinkert"
+    }
+  ],
   "main": [
     "index.js"
+  ],
+  "dependencies": {
+    "gfm-code-block-regex": "^0.2.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "^4.0.4",
+    "test-helpers": "^0.1.4"
+  },
+  "keywords": [
+    "backtick",
+    "block",
+    "code",
+    "exec",
+    "expression",
+    "extract",
+    "fence",
+    "fenced",
+    "fences",
+    "flavor",
+    "flavored",
+    "gfm",
+    "github",
+    "inline",
+    "lang",
+    "language",
+    "markdown",
+    "marked",
+    "match",
+    "matches",
+    "md",
+    "parse",
+    "pattern",
+    "patterns",
+    "re",
+    "regex",
+    "regexp",
+    "regular",
+    "render",
+    "replace",
+    "replacement"
   ]
 }
