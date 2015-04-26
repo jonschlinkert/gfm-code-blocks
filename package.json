@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "^4.0.4",
+    "should": "*",
     "test-helpers": "^0.1.4"
   },
   "keywords": [
