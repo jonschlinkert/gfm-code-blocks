@@ -16,6 +16,25 @@ console.log(code('\n```js\nfoo\n```\n'));
 //=> {lang: 'js', code: 'foo', block: '\n```js\nfoo\n```\n'}
 ```
 
+## Related projects
+
+* [gfm-code-block-regex](https://github.com/jonschlinkert/gfm-code-block-regex): RegExp for gfm (GitHub Flavored Markdown) fenced code blocks.
+* [markdown-toc](https://github.com/jonschlinkert/markdown-toc): Generate a markdown TOC (table of contents) with Remarkable.
+* [prettify-markdown](https://github.com/jonschlinkert/prettify-markdown): Prettify, format or beautify your markdown. Whatever you want to call it, this does that.… [more](https://github.com/jonschlinkert/prettify-markdown)
+* [remarkable](https://github.com/jonschlinkert/remarkable): Markdown parser, done right. 100% Commonmark support, extensions, syntax plugins, high speed - all in… [more](https://github.com/jonschlinkert/remarkable)
+
+## Running tests
+
+Install dev dependencies:
+
+```bash
+npm i -d && npm test
+```
+
+## Contributing
+
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/gfm-code-blocks/issues)
+
 ## Author
 
 **Jon Schlinkert**
