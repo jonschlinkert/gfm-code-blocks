@@ -7,11 +7,12 @@
 
 'use strict';
 
-var should = require('should');
+/* deps:mocha */
+require('should');
+require('mocha');
 var helpers = require('test-helpers')({dir: './'});
 var readme = helpers.readFixture('README.md');
 var codeBlocks = require('./');
-
 
 describe('code block', function () {
   it('should return the code blocks from the fixture.', function () {
