@@ -1,7 +1,7 @@
 {
   "name": "gfm-code-blocks",
   "description": "Extract gfm (GitHub Flavored Markdown) fenced code blocks from a string.",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "homepage": "https://github.com/jonschlinkert/gfm-code-blocks",
   "author": {
     "name": "Jon Schlinkert",
