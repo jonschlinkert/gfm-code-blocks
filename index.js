@@ -7,20 +7,25 @@
 
 'use strict';
 
-var re = require('gfm-code-block-regex')();
+var gfmRegex = require('gfm-code-block-regex');
 
 module.exports = function(str) {
-  var arr = [];
-  var match = null
+  if (typeof str !== 'string') {
+    throw new TypeError('expected a string');
+  }
 
-  while (match = re.exec(str)) {
-    arr.push({
+  var regex = gfmRegex();
+  var blocks = [];
+  var match = null;
+
+  while ((match = regex.exec(str))) {
+    blocks.push({
       start: match.index,
       end: match.index + match[1].length,
       lang: match[3],
-      code: match[5],
+      code: match[4],
       block: match[1]
     });
   }
-  return arr;
+  return blocks;
 };
