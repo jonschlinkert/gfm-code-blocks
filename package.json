@@ -3,21 +3,16 @@
   "description": "Extract gfm (GitHub Flavored Markdown) fenced code blocks from a string.",
   "version": "0.3.0",
   "homepage": "https://github.com/jonschlinkert/gfm-code-blocks",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/gfm-code-blocks.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "contributors": [
+    "Charlike Mike Reagent (https://i.am.charlike.online)",
+    "Jon Schlinkert <jon.schlinkert@sellside.com> (http://twitter.com/jonschlinkert)"
+  ],
+  "repository": "jonschlinkert/gfm-code-blocks",
   "bugs": {
     "url": "https://github.com/jonschlinkert/gfm-code-blocks/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/gfm-code-blocks/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "files": [
     "index.js"
   ],
@@ -29,16 +24,15 @@
     "test": "mocha"
   },
   "dependencies": {
-    "gfm-code-block-regex": "^0.2.1"
+    "gfm-code-block-regex": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "test-helpers": "^0.1.4"
+    "mocha": "^3.2.0"
   },
   "keywords": [
     "backtick",
     "block",
+    "blocks",
     "code",
     "exec",
     "expression",
